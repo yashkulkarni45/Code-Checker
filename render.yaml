@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: gemini-code-analyzer
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
